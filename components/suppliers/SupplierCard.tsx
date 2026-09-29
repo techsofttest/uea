@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Settings } from "lucide-react";
-import { SupplierItem } from "@/data/siteData";
 import { SectionEyebrow } from "../ui/SectionEyebrow";
 
 interface SupplierCardProps {

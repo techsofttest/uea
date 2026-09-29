@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import  Hero  from "@/components/home/Hero";
 import  ProductsIntro  from "@/components/home/ProductsIntro";
 import  AboutExperienceSection  from "@/components/home/AboutExperienceSection";
+import  About  from "@/components/home/About";
 import  MissionVision  from "@/components/home/MissionVision";
 import  GlobalPartnersMarquee  from "@/components/home/GlobalPartnersMarquee";
 import  WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -33,6 +34,12 @@ interface ProductResponse {
     sub: string;
     content: string;
     stat: Metric[];
+    image: string;
+  }| undefined;
+    page: {
+    title: string;
+    sub: string;
+    content: string;
     image: string;
   }| undefined;
  
@@ -122,7 +129,7 @@ export default async function Home() {
       <div className="bg-[#023077]">
         <GlobalPartnersMarquee suppliers={data?.supply ?? []} />
       </div>
-
+      <About about={data?.page} />
       {/* Boxed Content Sections Container */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8 py-8 sm:py-10">
         {/* Products Intro */}

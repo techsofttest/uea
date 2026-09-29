@@ -4,8 +4,6 @@ import { InnerHeroBanner } from "@/components/layout/InnerHeroBanner";
 import { ContactDetailsSection } from "@/components/contact/ContactDetailsSection";
 import { ContactFormSection } from "@/components/contact/ContactFormSection";
 
-import { SITE_CONFIG } from "@/data/siteData";
-
 interface Metric {
   title: number;
   icon: string;
