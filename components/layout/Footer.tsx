@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Container } from "./Container";
 import { Button } from "../ui/Button";
-import { SITE_CONFIG, PRODUCT_CATEGORIES, PARTNER_LOGOS } from "@/data/siteData";
 interface ProductResponse {
   contact: {
     address: string;
