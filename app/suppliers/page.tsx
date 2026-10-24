@@ -21,6 +21,7 @@ interface ProductResponse {
     supply: {
     id: string;
     name: string;
+    link: string;
     content: string;
     image: string;
   }[];
