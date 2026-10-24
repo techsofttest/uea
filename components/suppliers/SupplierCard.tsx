@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { Settings } from "lucide-react";
+import Link from "next/link";
 import { SectionEyebrow } from "../ui/SectionEyebrow";
 
 interface SupplierCardProps {
   supplier: {
     id: string;
     name: string;
+    link: string;
     content: string;
     image: string;
   };
@@ -15,7 +17,10 @@ interface SupplierCardProps {
 
 export default function SupplierCard({ supplier, index }: SupplierCardProps) {
   return (
-    <div className="group relative flex flex-col h-full bg-white border border-gray-200/90 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl hover:border-[#023077]/40 transition-all duration-300">
+              <a
+              href={supplier.link || ""}
+              target="_blank"
+              rel="noopener noreferrer" className="group relative flex flex-col h-full bg-white border border-gray-200/90 rounded-2xl overflow-hidden shadow-xs hover:shadow-xl hover:border-[#023077]/40 transition-all duration-300">
       {/* 1. LOGO CONTAINER ON TOP */}
       <div className="relative w-full h-52 sm:h-60 bg-gray-50 flex items-center justify-center p-8 border-b border-gray-100 group-hover:bg-blue-50/20 transition-colors overflow-hidden shrink-0">
         {/* Background Geometric & Gear Shapes */}
@@ -56,6 +61,6 @@ export default function SupplierCard({ supplier, index }: SupplierCardProps) {
           <div className="text-sm text-gray-600 font-normal leading-relaxed" dangerouslySetInnerHTML={{__html:supplier.content}} />
         </div>
       </div>
-    </div>
+    </a>
   );
 };
